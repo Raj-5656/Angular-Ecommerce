@@ -5,24 +5,30 @@ import { MainLayoutComponent } from './layout/main-layout/main-layout.component'
 
 export const routes: Routes = [
     {
-        path:'',
-        component:RegisterComponent
+        path: '',
+        // component:RegisterComponent,
+        redirectTo: 'dashboard/product',
+        pathMatch: 'full'
     },
     {
-        path:'login',
-        component:LoginComponent
-    },
-    {
-        path:'dashboard',
-        component:MainLayoutComponent,
-        children:[
+        path: 'dashboard',
+        component: MainLayoutComponent,
+        children: [
             {
-                path:"product",
-                loadChildren: () => import('./features/product/product-module').then(m=>m.ProductModule)
+                path: "product",
+                loadChildren: () => import('./features/product/product-module').then(m => m.ProductModule)
             },
             {
-                path:'cart',
-                loadChildren:()=>import('./features/cart/cart-module').then(m=>m.CartModule)
+                path: 'cart',
+                loadChildren: () => import('./features/cart/cart-module').then(m => m.CartModule)
+            },
+            {
+                path: 'login',
+                component: LoginComponent
+            },
+            {
+                path: 'register',
+                component: RegisterComponent
             }
         ]
     }
