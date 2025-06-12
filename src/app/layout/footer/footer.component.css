@@ -1,0 +1,48 @@
+.footer-container{
+    width: 100%;
+    height: 500px;
+}
+.footer-container .upper-footer-container{
+    border-top: 1px solid #dee2e6;
+    border-bottom:1px solid #dee2e6;
+    background-color: #F9F9FB;
+}
+.footer-container .payment-icon img{
+    width: auto;
+    height: 38px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #dadcde;
+    background-color: #f1f1f1;
+}
+h5{
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+p{
+    font-size: 14px;
+    color: #757575;
+}
+.footer-section2 ul li{
+    color: #616569;
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+.btn-ecomm{
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 0;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-control{
+    border-radius: 0;
+}
+
+.footer-section3 button:hover{
+    color: #fff;
+    background-color:#212529 ;
+    border-color: #212529;
+}
